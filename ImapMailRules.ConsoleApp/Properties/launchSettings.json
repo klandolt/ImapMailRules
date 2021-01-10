@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ImapMailRules.ConsoleApp": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

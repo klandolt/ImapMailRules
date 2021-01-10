@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImapMailRules.Core", "ImapMailRules.Core\ImapMailRules.Core.csproj", "{8131AD14-DBBE-4F63-93AD-0821129912AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImapMailRules.ConsoleApp", "ImapMailRules.ConsoleApp\ImapMailRules.ConsoleApp.csproj", "{18F7162A-AD2A-405E-8F2B-20972DCE128A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8131AD14-DBBE-4F63-93AD-0821129912AE} = {8131AD14-DBBE-4F63-93AD-0821129912AE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8131AD14-DBBE-4F63-93AD-0821129912AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8131AD14-DBBE-4F63-93AD-0821129912AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8131AD14-DBBE-4F63-93AD-0821129912AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8131AD14-DBBE-4F63-93AD-0821129912AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F7162A-AD2A-405E-8F2B-20972DCE128A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F7162A-AD2A-405E-8F2B-20972DCE128A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F7162A-AD2A-405E-8F2B-20972DCE128A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F7162A-AD2A-405E-8F2B-20972DCE128A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F543EF0-A045-4AEF-B021-D0EE5BE17585}
+	EndGlobalSection
+EndGlobal

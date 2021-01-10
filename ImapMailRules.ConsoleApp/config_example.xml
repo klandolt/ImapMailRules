@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MailConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ImapServer>mail.Server.ch</ImapServer>
+	<ImapPort>993</ImapPort>
+	<ImapSSL>true</ImapSSL>
+	<ImapUser>user@klandolt.ch</ImapUser>
+	<ImapPassword>password</ImapPassword>
+	<MailRules>
+		<MailRule>
+			<RuleName>Rule 1 Mark Read</RuleName>
+			<FilterFrom>*</FilterFrom>
+			<FilterTo>*</FilterTo>
+			<FilterSubject>Read</FilterSubject>
+			<FilterBody>*</FilterBody>
+			<MarkRead>true</MarkRead>
+			<Action>MarkRead</Action>
+		</MailRule>
+		<MailRule>
+			<RuleName>Rule 2 Move</RuleName>
+			<FilterFrom>max@muster.ch</FilterFrom>
+			<FilterTo>*</FilterTo>
+			<FilterSubject>*</FilterSubject>
+			<FilterBody>Body Filter</FilterBody>
+			<MarkRead>true</MarkRead>
+			<Action>Move</Action>
+			<ActionParam>INBOX.TEST.SubTest</ActionParam>
+		</MailRule>
+		<MailRule>
+			<RuleName>Rule 3 Delete</RuleName>
+			<FilterFrom>*</FilterFrom>
+			<FilterTo>del@klandolt.ch</FilterTo>
+			<FilterSubject>Del</FilterSubject>
+			<FilterBody>*</FilterBody>
+			<MarkRead>true</MarkRead>
+			<Action>Delete</Action>
+		</MailRule>
+	</MailRules>
+	<LogMail>log@klandolt.ch</LogMail>
+</MailConfig>
