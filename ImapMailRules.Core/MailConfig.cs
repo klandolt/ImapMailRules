@@ -8,6 +8,7 @@ using System.IO;
 using System.Xml.Serialization;
 using log4net;
 using MimeKit;
+using System.Security.Cryptography;
 
 namespace ImapMailRules.Core
 {
@@ -47,14 +48,27 @@ namespace ImapMailRules.Core
                 //Filestream schliessen
                 myFileStream.Close();
 
-                if(!config.CheckConfig())
+
+                if(!config.FileAlreadyChecked(ConfigFile))
                 {
-                    throw new ConfigErrorException(String.Format("Config content Error!! ConfigFile: {0}", ConfigFile));
+                    if (!config.CheckConfig())
+                    {
+                        throw new ConfigErrorException(String.Format("Config content Error!! ConfigFile: {0}", ConfigFile));
+                    }
+                    else
+                    {
+                        _log.Info("ConfigFile found & checked successful!");
+                        if(!config.SaveCheckFile(ConfigFile))
+                        {
+                            _log.Fatal("Failur at  writte CheckFile!");
+                        }
+                    }
                 }
                 else
                 {
-                    _log.Info("ConfigFile found & checked successful!");
+                    _log.Info("ConfigFile already checked!");
                 }
+                
             }
             else
             {
@@ -62,12 +76,56 @@ namespace ImapMailRules.Core
             }
             return config;
         }
+
+        private bool FileAlreadyChecked(string ConfigFile)
+        {
+            if(File.Exists(ConfigFile + ".checked"))
+            {
+                string FileHasch = String.Empty;
+                FileHasch = File.ReadAllText(ConfigFile + ".checked");
+                
+                //Checkend File Check
+                if(CalculateMD5(ConfigFile) == FileHasch)
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        private bool SaveCheckFile(string ConfigFile)
+        {
+            string FileHash = CalculateMD5(ConfigFile);
+            
+            using (StreamWriter writer = new StreamWriter(ConfigFile + ".checked"))
+            {
+                writer.Write(FileHash);
+            }
+
+            return true;
+        }
+
+
+        private string CalculateMD5(string ConfigFile)
+        {
+            using (var md5 = MD5.Create())
+            {
+                using (var stream = File.OpenRead(ConfigFile))
+                {
+                    var hash = md5.ComputeHash(stream);
+                    return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                }
+            }
+        }
+
         #endregion
 
         #region Check ConfigFile
-        public bool CheckConfig()
+        private bool CheckConfig()
         {
             _log.Debug("Beginn CheckConfig File");
+
             bool check = true;
 
             // Check Not Empty an existig Config Parameteter
