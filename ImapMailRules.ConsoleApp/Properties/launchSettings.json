@@ -2,6 +2,7 @@
   "profiles": {
     "ImapMailRules.ConsoleApp": {
       "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\..\\..\\..\\..\\..\\ImapMailRulesConfig\\Test_config.xml",
       "remoteDebugEnabled": false
     }
   }
