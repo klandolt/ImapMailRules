@@ -12,6 +12,8 @@
     <Description>look at the README</Description>
     <Company>klandolt</Company>
     <Authors>Kevin Landolt</Authors>
+    <PackageProjectUrl>https://github.com/klandolt/ImapMailRules</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/klandolt/ImapMailRules</RepositoryUrl>
   </PropertyGroup>
 
 

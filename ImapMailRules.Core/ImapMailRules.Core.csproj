@@ -8,6 +8,8 @@
     <Authors>Kevin Landolt</Authors>
     <Company>klandolt</Company>
     <NeutralLanguage>en</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/klandolt/ImapMailRules</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/klandolt/ImapMailRules</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
