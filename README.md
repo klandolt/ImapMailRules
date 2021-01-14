@@ -46,15 +46,16 @@ $ ./ImapMailRules.ConsoleApp [PathToConfig] [silent]
 | silent | yes | false | Mute the Commandline Output in ConsoleApp
 
 ### Exitcodes
-
-0 = all Fine
-
-11 = No Connection to the Server after Connect & Authenticate!
-12 = Could not connect to Server! Look at inner Exception:
-
-77 = Config content Error!! Set Log Level to Debug and search the error in your ConfigFile.
-
-99 = No ConfigFile found!!
+| Code | Description |
+|:-----|:------------|
+|0 | all Fine |
+| | |
+|11 | No Connection to the Server after Connect & Authenticate! |
+|12 | Could not connect to Server! Look at inner Exception: ... |
+| | |
+|77 | Config content Error!! Set Log Level to Debug and search the error in your ConfigFile. |
+| | |
+|99 | No ConfigFile found!! |
 
 ## Questions
 
