@@ -10,6 +10,8 @@
     <NeutralLanguage>en</NeutralLanguage>
     <PackageProjectUrl>https://github.com/klandolt/ImapMailRules</PackageProjectUrl>
     <RepositoryUrl>https://github.com/klandolt/ImapMailRules</RepositoryUrl>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
