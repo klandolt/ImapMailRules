@@ -27,7 +27,25 @@ The MIT License (MIT)
 Copyright (c) 2021 Kevin Landolt
 Detailed in the LICENSE File.
 
-## Exitcodes
+## Program usage
+
+Windows:
+```cmd
+ImapMailRules.ConsoleApp.exe [PathToConfig] [silent]
+```
+
+Linux:
+```bash
+$ ./ImapMailRules.ConsoleApp [PathToConfig] [silent]
+```
+
+### Parameters
+| Parameter                 | Optional  | Default Value   | Description |
+| :------------------------ |:----------| :---------------| :-----------|
+| PathToConfig 	 | yes |	config.xml      | Path to config File
+| silent | yes | false | Mute the Commandline Output in ConsoleApp
+
+### Exitcodes
 
 0 = all Fine
 
