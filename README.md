@@ -14,7 +14,7 @@ There is an example configuration file.
 
 The "ImapMailRules.ConsoleApp" execute this program in command line mode.
 
-## Thirdparty
+## Thirdparty / Thanks to:
 
 - Mailkit by Jeffrey Stedfast http://www.mimekit.net/
 - log4net by The Apache Software Foundation https://logging.apache.org/log4net/
