@@ -15,11 +15,12 @@ There is an example configuration file.
 The "ImapMailRules.ConsoleApp" execute this program in command line mode.
 
 ## Thirdparty / Thanks to:
-
-- Mailkit by Jeffrey Stedfast http://www.mimekit.net/
-- log4net by The Apache Software Foundation https://logging.apache.org/log4net/
-- log4net.xad Schema by Roger Knapp http://csharptest.net/downloads/schema/log4net.xsd
-- NETStandard.Library by Microsoft https://dotnet.microsoft.com/
+| Name: | Owner: | License: | Homepage: |
+| :--- |:------| :-------| :--------|
+| Mailkit | Jeffrey Stedfast | MIT License | http://www.mimekit.net/
+| log4net | The Apache Software Foundation | Apache License, Version 2.0 | https://logging.apache.org/log4net
+|  log4net.xsd	Schema | Roger Knapp | Apache License, Version 2.0 | http://csharptest.net/downloads/schema/log4net.xsd
+|  NETStandard.Library | Microsoft | MIT License | https://dotnet.microsoft.com/
 
 ## License
 The MIT License (MIT)
@@ -59,5 +60,5 @@ $ ./ImapMailRules.ConsoleApp [PathToConfig] [silent]
 
 ## Questions
 
-- For any questions and information. Ask me ;-)
+- For any questions and information. Ask me over github  ;-)
 
